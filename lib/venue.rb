@@ -19,4 +19,21 @@ class Venue
     end
     names_upcase
   end
+
+  def total_capacity
+    counter = 0
+    total = @patrons.count do |patron|
+      counter += 1
+    end
+    counter
+    # require 'pry'; binding.pry
+  end
+
+  def over_capacity?
+    if total_capacity >= 4
+      true
+    else
+      false
+    end
+  end
 end
