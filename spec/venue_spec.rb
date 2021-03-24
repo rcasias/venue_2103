@@ -49,7 +49,7 @@ describe Venue do
   end
 
   describe '#over_capacity' do
-    it 'returns true or false for capacity' do
+    it 'returns false for over max capacity' do
       venue = Venue.new('Bluebird', 4)
       venue.add_patron('Mike')
       venue.add_patron('Megan')
@@ -58,7 +58,7 @@ describe Venue do
       expect(venue.over_capacity?).to eq false
     end
 
-    it 'returns true or false for capacity' do
+    it 'returns capacity number' do
       venue = Venue.new('Bluebird', 4)
       venue.add_patron('Mike')
       venue.add_patron('Megan')
@@ -67,7 +67,7 @@ describe Venue do
       expect(venue.total_capacity).to eq(3)
     end
 
-    it 'returns true or false for capacity' do
+    it 'returns true for over capacity' do
       venue = Venue.new('Bluebird', 4)
       venue.add_patron('Mike')
       venue.add_patron('Megan')
