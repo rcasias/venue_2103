@@ -30,10 +30,15 @@ class Venue
   end
 
   def over_capacity?
-    if total_capacity >= 4
+    if total_capacity >= @capacity
       true
     else
       false
     end
+  end
+
+  def kick_out(patron)
+    # require 'pry'; binding.pry
+    @patrons.delete(patron)
   end
 end
