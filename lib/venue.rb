@@ -2,6 +2,7 @@ class Venue
   attr_reader :name,
               :capacity,
               :patrons
+
   def initialize(name, capacity)
     @name = name
     @capacity = capacity
@@ -26,7 +27,6 @@ class Venue
       counter += 1
     end
     counter
-    # require 'pry'; binding.pry
   end
 
   def over_capacity?
