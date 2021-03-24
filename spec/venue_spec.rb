@@ -43,6 +43,7 @@ describe Venue do
       venue.add_patron('Mike')
       venue.add_patron('Megan')
       venue.add_patron('Bob')
+
       expect(venue.yell_at_patrons).to eq ['MIKE', 'MEGAN', 'BOB']
     end
   end
@@ -53,6 +54,7 @@ describe Venue do
       venue.add_patron('Mike')
       venue.add_patron('Megan')
       venue.add_patron('Bob')
+
       expect(venue.over_capacity?).to eq false
     end
 
@@ -61,6 +63,7 @@ describe Venue do
       venue.add_patron('Mike')
       venue.add_patron('Megan')
       venue.add_patron('Bob')
+
       expect(venue.total_capacity).to eq(3)
     end
 
@@ -71,6 +74,7 @@ describe Venue do
       venue.add_patron('Bob')
       venue.add_patron('James')
       venue.add_patron('Cat')
+
       expect(venue.over_capacity?).to eq true
     end
 
@@ -83,6 +87,7 @@ describe Venue do
       venue.add_patron('Cat')
       venue.kick_out('James')
       venue.kick_out('Cat')
+
       expect(venue.patrons).to eq(['Mike', 'Megan', "Bob"])
     end
   end
