@@ -44,6 +44,7 @@ describe Venue do
       venue.add_patron('Megan')
       venue.add_patron('Bob')
 
+
       expect(venue.yell_at_patrons).to eq(['MIKE', 'MEGAN', 'BOB'])
     end
   end
